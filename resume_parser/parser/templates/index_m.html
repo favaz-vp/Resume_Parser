@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home Page{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/index.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-lg-6 col-md-8 col-sm-10">
+                <!-- Content here -->
+                <h3 class="text-brown">Unlock Resume</h3>
+                <h1 class="text-light">Potential</h1>
+                <h4 class="text-light">We help to scale your resume</h4>
+                <h6 class="text-light">
+                    Upload and parse resumes with ease
+                </h6>
+                <a href="{% url 'parser:upload_resume' %}">
+                    <button type="button" class="btn rounded-right m-3">
+                        Upload
+                    </button>
+                </a>
+                <a href="{% url 'parser:auth' %}">
+                    <button type="button" class="btn rounded-left ">
+                        Register
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

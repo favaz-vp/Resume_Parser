@@ -1,0 +1,224 @@
+
+
+/* Navbar */
+.img-fluid {
+    height: 120px; /* Adjust height as needed */
+    width: 100%; /* Maintain aspect ratio */
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0); /* semi-transparent black background */
+    padding-top: 0px;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: white; /* white text color */
+    text-align: right;
+}
+
+.navbar-brand:hover,
+.navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.8); /* slightly transparent white on hover */
+}
+
+.nav-item,
+.nav-link {
+    text-align: right;
+    padding-inline: 20px;
+    padding-bottom: 30px;
+}
+
+#navbarSupportedContent {
+    margin-right: 100px;
+    padding-block: 20px;
+}
+
+.text-center {
+    color: #fff2d7;
+    margin-bottom: 40px;
+}
+
+/* Login */
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16vh auto 0;
+    width: 80%;
+}
+
+.login-form .bg-primary {
+    border-radius: 8px; /* Rounded corners for the form */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    width: 100%;
+}
+
+.login-form form {
+    max-width: 400px; /* Limit form width for better readability */
+    padding: 35px; /* Padding inside the form */
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    border-radius: 4px; /* Rounded corners for input fields */
+    margin-bottom: 30px;
+}
+
+.login-form .btn {
+    font-weight: bold; /* Bold text for the login button */
+    background-color: #cd8b62;
+    font-size: 15px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.login-form h2 {
+    margin-top: 20px; /* Adjust this value as needed */
+    margin-bottom: 8vh; /* Adjust this value as needed */
+    text-align: center;
+}
+
+/* File upload */
+.file_upload {
+    width: 100%;
+    height: 50%;
+    border: 1px dashed #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+    background: #f8f8f9;
+    color: #666;
+    overflow: hidden;
+}
+
+.file_upload i {
+    font-size: 6em;
+    color: #ccc;
+}
+
+.file_upload input[type="file"] {
+    cursor: pointer;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.item-wrapper input[type="file"] {
+    height: 43px;
+    line-height: 43px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.upload-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 18vh;
+}
+
+.icon-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Optional spacing */
+}
+
+.btn {
+    background-color: #cd8b62;
+    width: 100%;
+}
+
+/* Table styles */
+table {
+    margin: 0 auto;
+    width: 80%;
+}
+
+table,
+th,
+td {
+    border: 4px solid #533424;
+    background-color: #7a543f;
+}
+
+th {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px 5px;
+}
+
+td {
+    padding: 25px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    color: rgb(255, 255, 255);
+    padding: 10px 5px;
+}
+
+td button {
+    background-color: #c99677;
+    border: none;
+    border-radius: 6px;
+    width: 60px;
+}
+
+.delete-button {
+    margin-bottom: 20px;
+}
+
+.filter-sort {
+    text-align: right;
+    margin-right: 15%;
+}
+
+.filter-sort button {
+    background-color: #c99677;
+    border: none;
+    border-radius: 6px;
+    width: 80px;
+    margin-bottom: 8px;
+    margin-left: 10px;
+}
+
+.skills {
+    max-width: 300px;
+    overflow-x: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+.skills::-webkit-scrollbar {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-brand,
+    .navbar-nav .nav-link {
+        text-align: center;
+    }
+
+    #navbarSupportedContent {
+        margin-right: 0;
+    }
+
+    .login-form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+}

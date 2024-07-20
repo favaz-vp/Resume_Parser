@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Page{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/about.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-md-6 text-center">
+                <h2 class="section-title animate__animated animate__fadeInDown text-light">About</h2>
+                <p class="section-description animate__animated animate__fadeInDown animate_delay-2s">
+                    <strong>Resume Parsing Technology:</strong> Utilizes advanced algorithms to automatically extract and organize information from resumes, such as contact details, work experience, skills, and education.
+                </p>
+                <p class="section-description animate__animated animate__fadeInDown animate_delay-2s">
+                    <strong>Efficiency in Recruitment:</strong> Helps recruiters and HR professionals save time by automating the initial screening process of resumes, enabling them to quickly identify suitable candidates.
+                </p>
+                <p class="section-description animate__animated animate__fadeInDown animate_delay-2s">
+                    <strong>Integration Capabilities:</strong> Often integrates with applicant tracking systems (ATS) or HR software to seamlessly import parsed resume data, enhancing overall recruitment workflows.
+                </p>
+              
+            
+            </div>
+        </div>
+    </div>
+{% endblock %}

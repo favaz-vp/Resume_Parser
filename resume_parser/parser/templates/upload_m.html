@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+
+    <style type="text/css">
+        body {
+            background-image: url("{% static 'images/contact1.jpg' %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .container {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10vh;
+            margin-bottom: 10vh;
+            padding: 20px;
+        }
+        .upload-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 22vh;
+        }
+        .error {
+            color: #fff;
+            font-weight: bold;
+        }
+        .btn{
+            background-color: #714920;
+            color:black;
+            font-weight: normal;
+        }
+        .btn:hover{
+            color: #fff;
+            background-color:#543310;
+        }
+    
+       
+    </style>
+
+    <title>Upload Page</title>
+ 
+</head>
+<body>
+
+  
+    
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="upload-container">
+                <h2 class="text-center mb-4">Upload Resume</h2>
+                {% if uploaded %}
+                <h5 class="uploade-message text-center">
+                    Already uploaded
+                    <a href="{% url 'parser:view_resume' %}" class="text-light">
+                        Link
+                    </a>
+                </h5>
+                {% else %}
+                <form action="" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-upload fa-3x"></i>
+                        </div>
+                        <input required type="file" name="file" class="form-control" />
+                    </div>
+                    {% if error %}
+                    <div class="text-center mb-3">
+                        <span class="error">{{ error }}</span>
+                    </div>
+                    {% endif %}
+                    <button type="submit" class="btn mt-2">
+                        Upload
+                    </button>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+        // Close the navbar when a link is clicked
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                var navbarToggler = document.querySelector('.navbar-toggler');
+                var navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarToggler.getAttribute('aria-expanded') === 'true') {
+                    navbarToggler.click();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
