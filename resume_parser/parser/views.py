@@ -21,7 +21,8 @@ import os
 import google.generativeai as genai
 
 # YOUR GEMINI API KEY REQUIRED 
-genai.configure(api_key="AIzaSyCgl_43mq1pS7bByNd82Y5h7OtlFdRPgIk")
+# CAN CREATE ONE EASILY FROM "https://ai.google.dev/gemini-api/docs/api-key"
+genai.configure(api_key="PROVIDE YOUR OWN GEMINI API KEY HERE")
 model = genai.GenerativeModel('gemini-pro')
 
 
